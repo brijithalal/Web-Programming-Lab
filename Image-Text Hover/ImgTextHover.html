@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Img-Txt Hover</title>
+	<style type="text/css">
+	img{
+	width: 500px;
+    height: 550px;
+   }
+#txt2{
+    display:none;
+}
+</style>
+</head>
+<body>
+    <center>
+	<div id="main">
+		<div id="image-text">
+			<img src="minion.jpeg" id="img1">
+		</div>
+		<div id="head">
+			<h1 id="txt1">This is batman</h1>
+			<h1 id="txt2">This is minion</h1>
+		</div>
+	</div>
+    </center>
+
+
+		<script type="text/javascript">
+			document.getElementById('main').addEventListener("mouseover",change1)
+			document.getElementById('main').addEventListener("mouseout",change2)
+
+			function change1(){
+				document.getElementById('img1').src="minion.jpeg"
+				document.getElementById('txt1').style.display="none"
+				document.getElementById('txt2').style.display="block"
+			}
+
+			function change2(){
+				document.getElementById('img1').src="batman.jpeg"
+				document.getElementById('txt1').style.display="block"
+				document.getElementById('txt2').style.display="none"
+			}
+
+		</script>
+
+</body>
+</html>
